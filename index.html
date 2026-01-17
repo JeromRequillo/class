@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Classroom Hub - Sir John</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* CSS with enhanced animations and professionalism */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f4f7f9 0%, #e2e8f0 100%);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #2d3748;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .announcement {
+            width: 100%;
+            background: linear-gradient(135deg, #3182ce, #2c5282);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        .container {
+            max-width: 500px;
+            width: 90%;
+            padding: 40px 0;
+            animation: fadeInUp 1.2s ease-out 0.3s both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #4a5568;
+            text-align: center;
+            animation: bounceIn 1s ease-out 0.5s both;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .subtitle {
+            color: #a0aec0;
+            margin-bottom: 30px;
+            font-size: 18px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            display: flex;
+            gap: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: left;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            animation: slideInLeft 1s ease-out 0.7s both;
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #cbd5e0;
+            flex-shrink: 0;
+            overflow: hidden;
+            border: 4px solid #e2e8f0;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info h2 {
+            font-size: 24px;
+            margin: 0 0 10px 0;
+            animation: fadeIn 1s ease-out 0.9s both;
+        }
+        .info h2 span { color: #3182ce; }
+        .info p {
+            font-size: 16px;
+            color: #718096;
+            margin: 5px 0 15px 0;
+        }
+
+        .contact-info {
+            background: #edf2f7;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 14px;
+            animation: fadeIn 1s ease-out 1.1s both;
+        }
+
+        .contact-item {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: #3182ce;
+        }
+
+        /* Buttons Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+            animation: fadeInUp 1s ease-out 1.3s both;
+        }
+
+        .btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn i {
+            font-size: 35px;
+            margin-bottom: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover i {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .btn-green { background: linear-gradient(135deg, #48bb78, #38a169); }
+        .btn-blue { background: linear-gradient(135deg, #4299e1, #3182ce); }
+        .btn-orange { background: linear-gradient(135deg, #ed8936, #dd6b20); }
+        .btn-purple { background: linear-gradient(135deg, #9f7aea, #805ad5); }
+
+        .footer-text {
+            margin-top: 25px;
+            color: #718096;
+            font-size: 16px;
+            text-align: center;
+            animation: fadeIn 1s ease-out 1.5s both;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="announcement">
+        📢 Announcement: Reminder: Submit your assignments by Friday!
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Digital Classroom Hub</h1>
+            <div class="subtitle">— The "Link-in-Bio" for Teachers —</div>
+        </header>
+
+        <div class="profile-card">
+            <div class="profile-img">
+                <img src="https://ui-avatars.com/api/?name=Sir+John&background=random&size=128" alt="Profile">
+            </div>
+            <div class="info">
+                <h2>Welcome to <span>Sir John's</span> Class!</h2>
+                <p>All your class resources in one place.</p>
+                <div class="contact-info">
+                    <div class="contact-item"><i class="fas fa-user-tie"></i> <strong>Mr. John</strong> | Mathematics</div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i> sir.john@email.com</div>
+                    <div class="contact-item"><i class="fab fa-twitter"></i> @SirJohnTeacher</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-text">Feel free to explore the links below!</div>
+
+        <div class="grid">
+            <a href="YOUR_GOOGLE_CLASSROOM_LINK" class="btn btn-green">
+                <i class="fas fa-chalkboard-user"></i>
+                Google Classroom
+            </a>
+            <a href="YOUR_ZOOM_LINK" class="btn btn-blue">
+                <i class="fas fa-video"></i>
+                Join Zoom Meeting
+            </a>
+            <a href="#" class="btn btn-orange">
+                <i class="fas fa-calendar-day"></i>
+                Class Schedule
+            </a>
+            <a href="#" class="btn btn-purple">
+                <i class="fas fa-download"></i>
+                Download Modules
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
