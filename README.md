@@ -6,10 +6,8 @@ This project is built using pure **HTML + CSS**, with smooth animations, modern 
 
 ---
 
-## 🚀 Live Preview
-*(Optional: Add your GitHub Pages link here later)*  
-Example:  
-👉 https://yourusername.github.io/digital-classroom-hub/
+## 🚀 Live Preview 
+👉 https://jeromrequillo.github.io/class
 
 ---
 
@@ -77,4 +75,4 @@ Perfect for teachers, tutors, and educators who want a simple but polished onlin
 
 This project is open-source under the MIT License — feel free to modify, improve, and personalize it.
 
-👨‍🏫 Built with passion by JEROOM REQUILLO ,LPT
+👨‍🏫 Built with passion by JEROM REQUILLO ,LPT
