@@ -1,5 +1,4 @@
-# 📚 Digital Classroom Hub — Sir Requillo
-
+# 📚 Digital Classroom Hub
 A clean, animated, and teacher-friendly **Link-in-Bio style web page** designed for educators who want to centralize their online classroom resources in one elegant hub.
 
 This project is built using pure **HTML + CSS**, with smooth animations, modern UI design, and a mobile-responsive layout.
